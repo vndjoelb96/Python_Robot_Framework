@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.8.1 on darwin)" generated="2024-03-01T22:33:27.438838" rpa="false" schemaversion="5">
+<suite id="s1" name="handlingForLoop" source="/Users/vinodjoel/PycharmProjects/Python_Robot_Framrework/Tests/Travels/handlingForLoop.robot">
+<test id="s1-t1" name="Testcase to demonstrate weblocators" line="9">
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>5s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-03-01T22:33:27.545752" elapsed="0.000215"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-01T22:33:27.546605" level="INFO">Opening browser 'chrome' to base url 'https://google.com'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-01T22:33:27.546422" elapsed="12.883343"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-01T22:33:40.430348" elapsed="0.548523"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-01T22:33:40.979719" level="INFO">Typing text 'RCV Academy' into text field 'name:q'.</msg>
+<arg>name:q</arg>
+<arg>RCV Academy</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-01T22:33:40.979132" elapsed="1.467270"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-03-01T22:33:42.447404" level="INFO">Sending key(s) ('Return',) to //div[@class='FPdoLc lJ9FBc']//input[@name='btnK'] element.</msg>
+<msg time="2024-03-01T22:33:44.696527" level="INFO">Sending keys Return</msg>
+<arg>//div[@class='FPdoLc lJ9FBc']//input[@name='btnK']</arg>
+<arg>Return</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-03-01T22:33:42.446901" elapsed="11.677995"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-01T22:33:54.193069" level="INFO">@{results_on_page} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="abcbfb6659b9afd1cf0f660efdfa8375", element="f.ADD1D69F7B689E99834CE9EC8449A7B5.d.A189EFB2604396C10B926B344450D1F5.e.53")&gt; ]</msg>
+<var>@{results_on_page}</var>
+<arg>xpath://div[@id='center_col']</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-01T22:33:54.125203" elapsed="0.067915"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-01T22:34:01.843414" level="INFO">${text} = Search Results
+
+rcvacademy/selenium-python-automation-framework-code
+GitHub
+https://github.com › rcvacademy › selenium-python-auto...
+Contribute to rcvacademy/selenium-python-automation-framework-code...</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-01T22:33:54.193802" elapsed="7.649734"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="abcbfb6659b9afd1cf0f660efdfa8375", element="f.ADD1D69F7B689E99834CE9EC8449A7B5.d.A189EFB2604396C10B926B344450D1F5.e.53")&gt;</var>
+<status status="PASS" start="2024-03-01T22:33:54.193641" elapsed="7.649973"/>
+</iter>
+<var>${element}</var>
+<value>@{results_on_page}</value>
+<status status="PASS" start="2024-03-01T22:33:54.193333" elapsed="7.650340"/>
+</for>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-03-01T22:34:01.843892" elapsed="0.076680"/>
+</kw>
+<doc>TC to demonstrate how to handle For Loop</doc>
+<status status="PASS" start="2024-03-01T22:33:27.544889" elapsed="34.375938"/>
+</test>
+<status status="PASS" start="2024-03-01T22:33:27.439663" elapsed="34.481664"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="handlingForLoop">handlingForLoop</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
